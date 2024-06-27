@@ -1,0 +1,808 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw  ;
+    z-index: 9;
+}
+
+
+/* mobile navbar */
+#mobile-nav-wrapper{
+    display: none;
+}
+#cross{
+    display: none;
+}
+#mobile-nav a{
+    text-decoration: none;
+    color: #000;
+}
+#mobile-nav a h4{
+    margin-top: 1vh;
+    font-size: 6vh;
+    text-align: right;
+}
+
+#nav{
+    padding: 2vw 2vw;  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+#nav-part2 #menu{
+    display: none;
+}
+#nav-part2 a{
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #00000058;
+    border-radius: 50px;
+    position: relative;
+    color: #000;
+    overflow: hidden;
+}
+#nav-part2 a h4{
+    position: relative;
+    z-index: 9;
+    font-weight: 400;
+    font-size: 1.2vw;
+}
+#nav-part2 a::after{
+    transition:all ease 0.3s;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    left: 0;
+    bottom: -100%;
+    /* z-index: 1; */
+    border-radius: 80%;
+}
+#nav-part2 a:hover h4{
+    transition:all ease 0.3s;
+    color: white;
+}
+#nav-part2 a:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#center{
+    height: 100vh;
+    width: 100%;
+    padding: 2vw 2vw  ;
+    display: flex;
+}
+#center #left{
+    position: relative;
+    z-index: 8;
+    width: 44%;
+    height: 100%;
+    display: flex;
+    padding-top: 3vw;
+    justify-content: center;
+}
+#left img{
+    height: 70vh;
+    width: 70vh;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+#center #right{
+    width: 66%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#center #right #top{
+    width: 100%;
+    height: 50%;
+    padding: 3vw  2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#center #right #top h2{
+    margin-top: 2vh;
+    font-size: 1.2vw;
+    text-align: end;
+}
+#center #right #top .heading{
+    margin-bottom: 2vh;
+    overflow: hidden;
+}
+#center #right #top h1{
+    text-align: end;
+    text-transform: uppercase;
+    font-size: 6vw;
+    line-height: 5vw;
+    font-weight: 600;
+}
+#center #right #bottom{
+    width: 100%;
+    height: 50%;
+    padding: 9.4vw 2vw;
+}
+#center #right #bottom h2{
+    font-size: 1.7vw;
+    margin-top: 2vh;
+}
+
+#right #hero-shape1{
+    height: 20vw;
+    width: 20vw;
+    position: absolute;
+    top: 40%;
+    right: 28%;
+}
+#right #hero-shape1 .hero1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:#f96e18;
+    filter: blur(30px);
+    border-radius: 50%;
+    animation-name: heroShape2anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#right #hero-shape1 .hero2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:#FE3B0D;
+    filter: blur(40px);
+    border-radius: 50%;
+    animation-name: heroShape2anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+/* #right #hero-shape1 .hero3{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:#fe690d;
+    filter: blur(30px);
+    border-radius: 50%;
+} */
+/* y niche positive hai 
+x left ki taraf positive hai  */
+@keyframes heroShape2anime1{
+    from{
+        transform: translate(-15%,15%);
+    }
+    to{
+        transform: translate(20%,-30%);
+    }
+}
+@keyframes heroShape2anime2{
+    from{
+        transform: translate(-40%,-10%);
+    }
+    to{
+        transform: translate(10%,-10%);
+    }
+}
+
+
+
+/* page2 */
+
+#page2{
+    width: 100%;
+    height: 100vh;
+}
+
+
+#footer{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 4vw;
+}
+#footer h1{
+    font-size: 19vw;
+    color: #fff;
+    /* text-align:; */
+}
+#footer .footer-nav{
+    width: 100%;
+    height: 120px;
+    border-top: 1px solid #dadada;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0 3vw;
+}
+#footer .footer-nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vh;
+    font-weight: 400;
+    cursor: pointer;
+}
+#footer-moving{
+    width: 100%;
+    height: 10vh;
+    background-color: #FE3B0D;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#footer-moving .hero-upper-layer{
+    background-color:#FE3B0D;
+    /* background-color: #000; */
+    height: 18vh;
+    filter: blur(10px);
+    width: 100%;
+    position: absolute;
+    top:20%;
+    left: 0;
+}
+#footer-moving .hero1{
+    height: 40vh;
+    width: 45%;
+    background-color:#FE3B0D;
+    filter: blur(50px);
+    border-radius: 40%;
+    position: absolute;
+    top: 0%;
+    left: -17%;
+    transform: rotate(45deg);
+    animation-name: footerHeroAnime1;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#footer-moving .hero3{
+    height: 15vh;
+    width: 20%;
+    background-color:#FE3B0D;
+    /* background-color: #000; */
+    filter: blur(30px);
+    border-radius: 40%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: rotate(36deg);
+    animation-name: footerHeroAnime3;
+    animation-duration: 3s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#footer-moving .hero2{
+    height: 55vh;
+    width: 60%;
+    right: -30%;
+    top: -10%;
+    background-color:#FE3B0D;
+    position: absolute;
+    filter: blur(30px);
+    border-radius: 20%;
+    transform: rotate(45deg);
+    animation-name: footerHeroAnime2;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes footerHeroAnime1 {
+    from{
+        height: 40vh;
+        transform: rotate(-30deg);
+    }
+    to{
+        height: 20vh;
+        transform: rotate(-18deg);
+    }
+}
+@keyframes footerHeroAnime2 {
+    from{
+        transform: rotate(20deg);
+    }
+    to{
+        transform: rotate(45deg);
+    }
+}
+@keyframes footerHeroAnime3 {
+    from{
+        height: 5vh;   
+        width: 20%;     
+    }
+    to{
+        height: 30vh;
+        width: 40%;
+    }
+}
+#footer-contact{
+    /* background-color: white; */
+    height: 30vh;
+    width: 20vh;
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    z-index: 90;
+    cursor: pointer;
+}
+#footer-email{
+    /* background-color: white; */
+    height: 30vh;
+    width: 30%;
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    z-index: 90;
+    padding: 3vw 3vw;
+    cursor: pointer;
+}
+#footer-email h2:hover{
+    opacity:.5;
+}
+#footer-email h2{
+    font-weight: 300;
+    font-size: 3vh;
+    color: #fff;
+}
+#footer-email .input{
+    margin-top: 1.5vw;
+}
+
+#footer-email input{
+    border: none;
+    border-bottom: 1px solid #dadada;
+    width: 100%;
+    font-size: 2vh;
+    columns:#fff;
+    background: transparent;
+    padding: 2vh;
+}
+
+#footer-contact a{
+    text-decoration: none;
+    color: #fff;
+    display:block;
+    margin-top: .6vh;
+    font-size: 2.4vw;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+}
+#footer-contact a:hover{
+    opacity: .5;
+}
+
+
+/* RESPONSIVENESS */
+
+@media (max-width:600px) {
+    #mobile-nav-wrapper{
+        height:0;
+        width: 100%;
+        /* height: 50vh; */
+        /* display: none; */
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background-color:#dadada41;
+    }
+    #mobile-nav{
+        /* display: none; */
+        padding: 0 2vh;
+        background-color: #EFEAE3;
+        width: 96%;
+        height: 0;
+        position: absolute;
+        top:0;
+        left: .9vh;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        /* transition: all linear 5s; */
+        z-index: 99;
+    }
+    #mobile-nav a {
+        scale:0
+    }
+    #cross{
+        border-radius: 100%;
+    }
+    #cross i{
+        font-size: 2vh;
+    }
+    #nav{
+        width: 100%;
+        padding: 6vw 4vw;  
+        /* background-color: red; */
+    }
+    #nav img{
+        height: 11vw;
+    }
+    #nav-part2 #menu{
+        display: block;
+    }
+    #nav-part2 a{
+        display: none;
+    }
+    #nav-part2 a h4{
+        font-size: 3.2vw;
+    }
+    #nav-part2 a::after{
+        transition:all ease 0.3s;
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        left: 0;
+        bottom: -100%;
+        /* z-index: 1; */
+        border-radius: 80%;
+    }
+    #nav-part2 a:hover h4{
+        transition:all ease 0.3s;
+        color: white;
+    }
+    #nav-part2 a:hover::after{
+        bottom: 0;
+        border-radius: 0;
+    }
+
+    
+#center{
+    min-height: 100vh;
+    flex-direction: column-reverse;
+}
+#center #left{
+    width: 100%;
+    height: 44%;
+    display: flex;
+    padding-top: 0;
+    justify-content: center;
+}
+#left img{
+    height: 43vh;
+    width: 43vh;
+
+
+    
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+#center #right{
+    width: 100%;
+    height: 55%;
+
+    display: flex;
+    flex-direction: column;
+}
+#center #right #top{
+    width: 100%;
+    height: 40%;
+    margin-top: 2vh;
+}
+#center #right #top h2{
+    margin-top: .5vh;
+    font-size: 2vh;
+    text-align: end;
+    position: relative;
+}
+#center #right #top .heading{
+    margin-bottom: 3vh;
+    overflow:visible;
+    height: fit-content;
+    position:relative;
+    z-index: -1;
+}
+#center #right #top h1{
+    font-size: 6vh;
+    letter-spacing: -1px;
+    line-height: 3vh;
+    font-weight: 600;
+}
+#center #right #bottom{
+    width: 100%;
+    height:60%;
+}
+#center #right #bottom h2{
+    font-size: 2.6vh;
+    margin-top: 2.3vh;
+}
+
+
+#right #hero-shape1{
+    height: 20vh;
+    width: 20vh;
+    position: absolute;
+    top: 26%;
+    left: 24%;
+}
+#right #hero-shape1 .hero1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:#f96e18;
+    filter: blur(10px);
+    border-radius: 50%;
+    animation-name: heroShape2anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#right #hero-shape1 .hero2{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:#FE3B0D;
+    filter: blur(10px);
+    border-radius: 50%;
+    animation-name: heroShape2anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+/* #right #hero-shape1 .hero3{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color:#fe690d;
+    filter: blur(30px);
+    border-radius: 50%;
+} */
+/* y niche positive hai 
+x left ki taraf positive hai  */
+@keyframes heroShape2anime1{
+    from{
+        transform: translate(-15%,15%);
+    }
+    to{
+        transform: translate(20%,-30%);
+    }
+}
+@keyframes heroShape2anime2{
+    from{
+        transform: translate(-40%,-10%);
+    }
+    to{
+        transform: translate(10%,-10%);
+    }
+}
+
+
+#page2{
+    width: 100%;
+    height: 60vh;
+}
+
+#footer{
+    height: 60vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 4vh;
+}
+#footer h1{
+    font-size: 10.4vh;
+    color: #fff;
+    text-align:center;
+}
+#footer .footer-nav{
+    width: 100%;
+    height: 60px;
+    border-top: 1px solid #dadada;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    padding: 0 2vh;
+}
+#footer .footer-nav h4{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1vh;
+    font-weight: 300;
+}
+#footer .footer-nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1vh;
+    font-weight: 300;
+}
+
+#footer-moving{
+    width: 100%;
+    height: 15vh;
+    background-color: #FE3B0D;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#footer-moving .hero-upper-layer{
+    background-color:#FE3B0D;
+    /* background-color: #000; */
+    height: 18vh;
+    filter: blur(10px);
+    width: 120%;
+    position: absolute;
+    top:40%;
+    left: -3%;
+}
+#footer-moving .hero1{
+    height: 20vh;
+    width: 25%;
+    filter: blur(30px);
+    border-radius: 30%;
+    position: absolute;
+    top: 100%;
+    left: 76%;
+    transform: rotate(25deg);
+    animation-name: footerHeroAnime1;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#footer-moving .hero3{
+    height: 15vh;
+    width: 20%;
+    background-color:#FE3B0D;
+    /* background-color: none; */
+    /* background-color: #00000055; */
+    filter: blur(30px);
+    border-radius: 40%;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: rotate(-20deg);
+    animation-name: footerHeroAnime3;
+    animation-duration: 3s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#footer-moving .hero2{
+    height: 55vh;
+    width: 50%;
+    right: -20%;
+    top: -90%;
+    background-color:none;
+    position: absolute;
+    filter: blur(30px);
+    border-radius: 20%;
+    animation-name: footerHeroAnime2;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes footerHeroAnime1 {
+    from{
+        transform: rotate(-30deg);
+    }
+    to{
+        transform: rotate(-18deg);
+    }
+}
+@keyframes footerHeroAnime2 {
+    from{
+        transform: rotate(-30deg);
+    }
+    to{
+        transform: rotate(-10deg);
+    }
+}
+@keyframes footerHeroAnime3 {
+    from{
+        height: 30vh;        
+    }
+    to{
+        height: 5vh;
+    }
+}
+#footer-contact{
+    /* background-color: white; */
+    height: 30vh;
+    width: 100%;
+    position: absolute;
+    top: 9%;
+    left: 10%;
+    z-index: 90;
+    cursor: pointer;
+}
+#footer-email{
+    /* background-color: white; */
+    height: 30vh;
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    z-index: 90;
+    padding: 3vh 6vh;
+    cursor: pointer;
+}
+#footer-email h2:hover{
+    opacity:.5;
+}
+#footer-email h2{
+    font-weight: 300;
+    font-size: 2vh;
+    color: #fff;
+}
+#footer-email .input{
+    margin-top: 1.5vw;
+}
+
+#footer-email input{
+    border: none;
+    border-bottom: 1px solid #dadada;
+    width: 100%;
+    font-size: 2vh;
+    columns:#fff;
+    background: transparent;
+    padding: 2vh;
+}
+#footer-email input:focus{
+    border: none;
+}
+
+#footer-contact a{
+    font-size: 3vh;
+}
+#footer-contact a:hover{
+    opacity: .5;
+}
+
+
+}
+
